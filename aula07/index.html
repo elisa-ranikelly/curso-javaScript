@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando o DOM</title>
+    <style>
+        body{
+            background-color: rgb(73, 73, 252);
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai os resultados</p>
+    <p>Estudando o DOM</p>
+    <div id="msg" name="qualquer">Clique em mim.</div><br>
+
+    <script>
+        //pega as tags p
+        var p = window.document.getElementsByTagName("p")[1]
+        //mostra na tela o que pegou
+        window.document.write("Resultado: " + p.innerText);
+
+        //pega o corpo
+        var corpo = window.document.body
+        corpo.style.background = "pink";
+
+        //pega o id ex: msg
+        var d = window.document.getElementById("msg");
+        d.style.color = "black";
+        
+        //modifica = d.innerText = "Mudei"
+
+        //por nome
+        var n = window.document.getElementsByName("qualquer")[0];
+        window.document.write(n.innerText);
+    </script>
+</body>
+</html>

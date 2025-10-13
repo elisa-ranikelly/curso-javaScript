@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Testando nacionalidades</h1>
+    <label for="nas">País:
+        <input type="text" name="nas" id="nas">
+    </label>
+    <input type="button" value="Verificar">
+    <div id="res"></div>
+
+    <script>
+        var botao = window.document.querySelector('input[type="button"]');
+        botao.addEventListener("click", verifica);
+        function verifica(){
+            var nacionalidade = window.document.getElementById("nas").value;
+            if(nacionalidade.trim().toLowerCase() === "brasil"){
+                res.innerHTML = `Seu país é Brasil, então você é <strong>brasileiro(a)</strong>!`
+            }else {
+                res.innerHTML = `Você é <strong>estrangeiro(a)</strong>!`
+            }
+        }
+
+    </script>
+</body>
+</html>

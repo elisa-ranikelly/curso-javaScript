@@ -38,3 +38,14 @@ footer{
     font-style: italic;
     margin: 20px;
 }
+
+section#gerenciamento{
+    width: 500px;
+    height: 500px;
+}
+
+.div1{
+    text-align: left;
+    padding: 20px;
+    font-size: 1.2em;
+}

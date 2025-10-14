@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Idades</title>
 </head>
-<body>
-    <h1>Verificando Idades</h1>
+<body onload="carrega()">
+    <header>
+        <h1>Gerenciando Idades</h1>
+   </header>
+    <section id="gerenciamento">
+        <div class="div1">
+           <label for="nas">Ano nascimento: 
+            <input type="number" name="nascimento" id="nas" min="0" required>
+           </label>
+
+           <p>Sexo: 
+                <label for="mas">Masculino</label>
+                <input type="radio" name="radsexo" id="mas">
+                <label for="fem">Feminino</label>
+                <input type="radio" name="radsexo" id="fem">
+           </p>
+
+           <p><input type="button" value="Verificar" onclick="verifica()"></p>
+        </div>
+        <div id="res" class="div1">
+            Preencha os dados acima para ver o resultado!
+        </div>
+    </section>
+    <footer>
+        <p>@eu_elisaranikelly</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

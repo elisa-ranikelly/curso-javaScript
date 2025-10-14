@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    background-color: rgb(255, 226, 231);
+}
+
+header, h1 {
+    text-align: center;
+    margin: 30px 0px;
+    color: rgb(217, 25, 217);
+}
+
+article{
+    background-color: plum;
+    width: 450px;
+    height: 300px;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.392);
+}
+
+section#form{
+    text-align: center;
+    padding: 30px;
+}
+
+input#numero{
+    width: 250px;
+    height: 40px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+}
+
+input#botao{
+    margin: 20px;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgb(255, 226, 231);
+    cursor: pointer;
+}
+
+#botao:hover{
+    background-color: black;
+    color: plum;
+}
+
+section#resultado{
+    text-align: center;
+    color: white;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Agenda de contatos</title>
+</head>
+<body>
+    <article>
+        <section id="form">
+            <h1>Agenda de Contatos</h1>
+            <form action="" method="post" autocomplete="on">
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="name" id="nome" placeholder="Seu nome" required class="txt">
+                </div>
+                
+                <div>
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" name="address" id="endereco" placeholder="Seu endereço" required class="txt">
+                </div>
+                
+                <div>
+                    <label for="tipoMoradia">Tipo de moradia:</label>
+                    <label for="tipoCasa">Casa</label>
+                    <input type="radio" name="tipo" id="casa" checked>
+                
+                    <label for="tipoApartemento">Apartamento</label>
+                    <input type="radio" name="tipo" id="apartamento">
+                </div>
+                        
+                <div>
+                    <label for="tel">Telefone:</label>
+                    <input type="text" name="telefone" id="tel" placeholder="Ex: (xx) x xxxx-xxxx" required class="txt">
+                </div>
+                    
+                <div>
+                    <label for="linguagens">Linguagens Preferidas:</label>
+                    <input type="checkbox" name="linguagemC" id="c"> C
+                    <input type="checkbox" name="linguagemC#" id="csharp"> C#
+                    <input type="checkbox" name="linguagemJava" id="java"> Java
+                    <input type="checkbox" name="linguagemPHP" id="php"> PHP
+                    <input type="checkbox" name="linguagemPython" id="python"> Python
+                </div>
+                
+                <div>
+                    <label for="obs">Observação:</label><br>
+                    <textarea name="observacao" id="obs" cols="30" rows="8" placeholder="Digite aqui..."></textarea>
+                </div>
+                
+                <div>
+                    <input type="button" value="Adicionar" id="botao">
+                </div>
+            </form>
+        </section>
+
+        <section id="lista-contato">
+            <h1>Lista de Contatos</h1>
+            <div id="titulos">
+                Nome | Endereço | Tipo Moradia | Telefone | Linguagens | Observação
+            </div>
+        </section>
+    </article>
+
+    <script src="script.js"></script>
+</body>
+</html>

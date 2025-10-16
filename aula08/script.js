@@ -9,38 +9,38 @@ function criarContato(){
     var endereco = window.document.getElementById("endereco").value;
     var tel = window.document.getElementById("tel").value;
     var obs = window.document.getElementById("obs").value;
+    
+    var tipo = window.document.querySelector('input[name="tipo"]:checked').value;
+
     var linguagens = [...document.querySelectorAll('input[type="checkbox"]:checked')].map(l => l.value).join(', ');
-    var tipo = document.getElementsByName("tipo");
-    var tipoMoradia = tipo[0].checked ? "Casa" : "Apartamento";
 
     if(nome === "" || endereco === "" || tel === "" || obs === ""){
         window.alert("ERRO: Insira os dados!");
         return;
     }
 
-    adicionarContato(nome, endereco, tel, tipoMoradia, linguagens, obs.value);
-
-    window.document.querySelector("form").reset();
+    adicionarContato(nome, endereco, tel, obs, tipo, linguagens);
+    window.document.getElementById("formulario").reset();
 }
 
-function adicionarContato(nome, endereco, tel, tipoMoradia, linguagens, obs){
+function adicionarContato(nome, endereco, tel, obs, tipo, linguagens){
 
-    var contato = window.document.createElement("div");
-    contato.className = "contato";
-
-    contato.innerHTML = `
-        <strong>Nome:</strong> ${nome}
-        <strong>Endereço:</strong> ${endereco}
-        <strong>Telefone:</strong> ${tel}
-        <strong>Moradia:</strong> ${tipoMoradia}
-        <strong>Linguagens:</strong> ${linguagens}
-        <strong>Observações:</strong> ${obs}
+    var linha = window.document.createElement("tr");
+    
+    linha.innerHTML = `
+        <td>${nome}</td>
+        <td>${endereco}</td>
+        <td>${tipo}</td>
+        <td>${tel}</td>
+        <td>${linguagens}</td>
+        <td>${obs}</td>
+        <td><button class="excluir">Excluir</button></td>
     `;
 
-    contato.querySelector(".excluir").addEventListener("click", function() {
-                contato.remove();
+    linha.querySelector(".excluir").addEventListener("click", function() {
+        linha.remove();
     });
 
-    lista.appendChild(contato);
+    lista.appendChild(linha);
 }
 

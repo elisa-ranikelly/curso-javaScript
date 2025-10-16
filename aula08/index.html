@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon">
     <title>Agenda de contatos</title>
 </head>
 <body>
     <article>
         <section id="form">
             <h1>Agenda de Contatos</h1>
-            <form action="" method="post" autocomplete="on">
+            <form action="" method="post" id="formulario" autocomplete="on">
                 <div>
                     <label for="nome">Nome:</label>
                     <input type="text" name="name" id="nome" placeholder="Seu nome" required class="txt">
@@ -23,11 +24,12 @@
                 
                 <div>
                     <label for="tipoMoradia">Tipo de moradia:</label>
-                    <label for="tipoCasa">Casa</label>
-                    <input type="radio" name="tipo" id="casa" checked>
+                    
+                    <label for="casa">Casa</label>
+                    <input type="radio" name="tipo" id="casa" value="Casa" checked>
                 
-                    <label for="tipoApartemento">Apartamento</label>
-                    <input type="radio" name="tipo" id="apartamento">
+                    <label for="apartemento">Apartamento</label>
+                    <input type="radio" name="tipo" id="apartamento" value="Apartamento">
                 </div>
                         
                 <div>
@@ -37,11 +39,11 @@
                     
                 <div>
                     <label for="linguagens">Linguagens Preferidas:</label>
-                    <input type="checkbox" name="linguagemC" id="c"> C
-                    <input type="checkbox" name="linguagemC#" id="csharp"> C#
-                    <input type="checkbox" name="linguagemJava" id="java"> Java
-                    <input type="checkbox" name="linguagemPHP" id="php"> PHP
-                    <input type="checkbox" name="linguagemPython" id="python"> Python
+                    <input type="checkbox" name="linguagemC" id="c" value="C"> C
+                    <input type="checkbox" name="linguagemC#" id="csharp" value="C#"> C#
+                    <input type="checkbox" name="linguagemJava" id="java" value="Java"> Java
+                    <input type="checkbox" name="linguagemPHP" id="php" value="PHP"> PHP
+                    <input type="checkbox" name="linguagemPython" id="python" value="Python"> Python
                 </div>
                 
                 <div>
@@ -57,9 +59,20 @@
 
         <section id="lista-contato">
             <h1>Lista de Contatos</h1>
-            <div id="titulos">
-                Nome | Endereço | Tipo Moradia | Telefone | Linguagens | Observação
-            </div>
+            <table id="tabela">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Endereço</th>
+                        <th>Tipo de Moradia</th>
+                        <th>Telefone</th>
+                        <th>Linguagens</th>
+                        <th>Observação</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody id="lista"></tbody>
+            </table>
         </section>
     </article>
 

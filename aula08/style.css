@@ -22,10 +22,18 @@ section{
     margin: auto;
     margin-top: 30px;
     padding: 30px;
-    width: 800px;
-    height: 680px;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.282);
+}
+
+section#form{
+    width: 800px;
+    height: 680px;
+}
+
+section#lista-contato{
+    width: 800px;
+    height: auto;
 }
 
 div{
@@ -43,7 +51,10 @@ input.txt{
 }
 
 textarea{
-    padding-left: 5px;
+    width: 650px;
+    border-radius: 8px;
+    border: none;
+    padding: 8px;
     margin: 5px 0px;
 }
 
@@ -53,46 +64,64 @@ input#botao{
     border-radius: 20px;
     border: none;
     cursor: pointer;
-
     display: block;
     margin: auto;
     
 }
 
-input#botao:hover, .excluir:hover{
+input#botao:hover{
     background-color: rgb(157, 55, 89);
     color: white;
 }
 
-section#lista-contato{
+
+#lista-contato{
     margin-top: 60px;
-    margin-bottom: 20px;
-    height: 40vh;
+    margin-bottom: 60px;
+    padding: 20px;
 }
 
-div#titulos{
-    background-color: aliceblue;
-    margin: 10px 0px;
-    word-spacing: 15px;
-}
-
-.contato{
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    padding: 10px;
+table{
+    margin-top: 30px;
+    width: 100%;
+    border-collapse: collapse;
     background-color: white;
+    table-layout: fixed;
+    
+}
+
+th{
+    text-align: center;
+    border: 2px solid black;
+    padding: 8px;
+}
+
+td{
+    padding: 8px;
+    border: 2px solid black;
+    font-weight: normal;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+tbody{
+    display: table-row-group;
+    max-height: 150px;
+    overflow-y: auto;
 }
 
 .excluir{
     background-color: rgb(157, 55, 89);
+    display: block;
+    margin: auto;
     color: white;
     border: none;
-    border-radius: 10px;
-    padding: 5px 10px;
+    border-radius: 8px;
+    padding: 4px 8px;
     cursor: pointer;
-    margin-top: 10px;
 }
+
+
 
 
 
